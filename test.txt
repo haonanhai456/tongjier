@@ -1,0 +1,21 @@
+hahahahahahahahahahahah
+
+readline ='C:\Users\ถฮมฌบุ\Desktop\kaifangX.txt'
+
+writeline='Users/ถฮมฌบุ/Desktop/test.txt'
+
+readlines=open(readline,'r',encoding ='gbk',errors='lignore')
+
+writelines=open(writeline,'a',encoding='gbk',errors='ignore')               
+    
+    for i in range(10000):
+        
+        try:
+            email=readlines.readline().split(',')[9]
+            print(email)
+            writelines.write(email)
+        execpt Exception as e:
+            print(e)
+    readlines.close()
+          
+    writelines.close()  

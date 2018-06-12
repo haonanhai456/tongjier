@@ -30,3 +30,15 @@ with open(see,'a',encoding='utf-8') as f:
         header ={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'}
         b=requests.get(url[i],headers=header)
         f.write(b.text) 
+
+
+import requsts
+a = requests.get('http://news.baidu.com/')                            
+
+context = a.text
+res = re.compile('[a-zA-z]+://[^\s]*',re.S)
+re.findall(res,context)
+
+
+
+

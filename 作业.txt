@@ -1,0 +1,14 @@
+import requests
+from lxml import etree
+s = 0
+res = requests.get('http://www.17k.com/list/2822387.html')
+tree = etree.HTML(res.text)
+book = tree.xpath('//div[@class="Main List"]/dl[@class="Volume"][1]/dd/a')
+for i in book:
+    w = i.xpath('./@href')[0]
+    hrl= requests.get('http://www.17k.com'+w)
+    s = s+1
+    tree1 = etree.HTML(HRL.text)
+    e = tree1.xpath('//body/div[@class="area"]/div[@class="read"]/div[2]/div[1]/div[@class="p"]/text()')
+    d =str(e)
+    with open('C:\Users\∂Œ¡¨∫ÿ\Desktop\–°Àµ.txt','w',encoding='utf-8') as f:f.write(d)
